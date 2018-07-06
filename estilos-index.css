@@ -5,7 +5,7 @@
 }
 
 .contenedor {
-  background: #ccc;
+  background: #ccc; /* footer */
   width: 90%;
   max-width: 1000px;
   margin: auto;
@@ -17,7 +17,7 @@
 }
 
 header {
-  background: #71737C;
+  background: #71737C; /* Desnav */
   width: 100%;
   padding: 20px;
 
@@ -163,5 +163,9 @@ footer .links a:hover {
   }
 }
 body {
-  background: #e9e9e9;
+  background-image: url(images/backondo.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center; 
+  background-color: grey;
 }
