@@ -91,7 +91,7 @@ header nav a:hover {
 }
 
 aside {
-  background: #e67e22;
+  background: black;
   padding: 20px;
   /* Flex */
   flex: 1 1 30%;
@@ -101,7 +101,7 @@ aside {
   flex-direction: column;
 }
 aside .widget {
-  background: #d35400;
+  background: yellow;
   height: 150px;
   margin: 10px;
 }

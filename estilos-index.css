@@ -91,7 +91,7 @@ header nav a:hover {
 }
 
 aside {
-  background: #e67e22;
+  background: black;
   padding: 20px;
   /* Flex */
   flex: 1 1 30%;
@@ -101,7 +101,7 @@ aside {
   flex-direction: column;
 }
 aside .widget {
-  background: #d35400;
+  background: yellow;
   height: 150px;
   margin: 10px;
 }
@@ -163,9 +163,10 @@ footer .links a:hover {
   }
 }
 body {
-  background-image: url(images/backondo.jpg);
+  /*background-image: url(images/backondo.jpg);*/
+  background-color:   #ff8000;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center; 
-  background-color: grey;
+  /*background-color: grey;*/
 }
