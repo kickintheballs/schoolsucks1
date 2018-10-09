@@ -32,6 +32,7 @@ header {
 header .logo {
   color: #fff;
   font-size: 40px;
+  font-family: serif;
 }
 
 header .logo img {
@@ -61,6 +62,7 @@ header nav a {
   text-decoration: none;
   padding:  10px;
   display: inline-block;
+  font-size: 15px;
 
   /* Flex */
   flex-grow: 1;
@@ -119,7 +121,7 @@ footer {
 
 footer .links {
   background: #F1BF2D;
-
+  z-index: 1;
   /* FLex */
   display: flex;
   flex-wrap: wrap;
@@ -208,3 +210,10 @@ body, html {
 #Market {background-color: green;}
 #Events {background-color: blue;}
 #IDK {background-color: orange;}
+
+.nnet {
+  float: right;
+}
+.igceal {
+  float: right;
+}
