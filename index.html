@@ -25,14 +25,30 @@
       </nav>
     </header>
     <section class="main">
-      <article>
-        <h2 class="titulo">NO SE QUE TOY HACIENDO</h2>
-        <p>Wena los cabros</p>
-      </article>
-      <article>
-        <h2 class="titulo">NO SE QUE TOY HACIENDO</h2>
-        <p>Wena los cabros</p>
-      </article>
+       <button class="tablink" onclick="openPage('Home', this, 'red')"id="defaultOpen">Noticias</button>
+        <button class="tablink" onclick="openPage('Market', this, 'green')">Mercado</button>
+        <button class="tablink" onclick="openPage('Events', this, 'blue')">Eventos</button>
+        <button class="tablink" onclick="openPage('IDK', this, 'orange')">IDK</button>
+
+    <div id="Home" class="tabcontent">
+      <h3> </h3>
+      <p>Home is where the heart is..</p>
+    </div>
+    <div id="Market" class="tabcontent">
+      <h3> </h3>
+      <p>Some news this fine day!</p>
+    </div>
+
+    <div id="Events" class="tabcontent">
+      <h3> </h3>
+      <p>Get in touch, or swing by for a cup of coffee.</p>
+    </div>
+
+    <div id="IDK" class="tabcontent">
+      <h3> </h3>
+      <p>Who we are and what we do.</p>
+    </div> 
+
     </section>
 
     <aside>
@@ -55,5 +71,30 @@
       </section>
     </footer>
   </div>
+  <script type="text/javascript">
+    function openPage(pageName, elmnt, color) {
+    // Hide all elements with class="tabcontent" by default */
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+
+    // Remove the background color of all tablinks/buttons
+    tablinks = document.getElementsByClassName("tablink");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].style.backgroundColor = "";
+    }
+
+    // Show the specific tab content
+    document.getElementById(pageName).style.display = "block";
+
+    // Add the specific color to the button used to open the tab content
+    elmnt.style.backgroundColor = color;
+    }
+
+  // Get the element with id="defaultOpen" and click on it
+  document.getElementById("defaultOpen").click(); 
+  </script>
 </body>
 </html>
