@@ -6,54 +6,82 @@
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0 maximum-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Colegio El Arrayán</title>
-  <link rel="stylesheet" href="estilos-index.css">
+  <link rel="stylesheet" href="assets/css/styles.css">
   <script src="prefix.js"></script>
 </head>
 <body>
   <div class="contenedor">
     <header>
       <div class="logo">
-        <img src="images/logo.jpg" width="150" alt="">
-        <a href="index.html">Colegio El Arrayán</a>
+        <a href="index.html"> <img src="assets/images/logo.jpg" width="150" alt=""></a>
+        <a href="index.html" style="text-shadow:#90EE90 3px 3px 5px;">Colegio El Arrayán</a>
       </div>
       <nav>
         <a href="index.html">Inicio</a>
-        <a href="Calendarios/Seleccion.html">Calendarios</a>
-        <a href="Horarios/Seleccion.html">Horarios</a>
-        <a style="cursor:help;" href="#">Informaciones</a>
-        <a style="cursor:help;" href="#">Sobre Nosotros</a>
+        <a href="pages/calendarios/Seleccion.html">Calendarios</a>
+        <a href="pages/horarios/Seleccion.html">Horarios</a>
+        <a href="#">Informaciones</a>
+        <a href="#">Materiales</a>
+        <a style="cursor:help;" href="#">About us</a>
       </nav>
     </header>
     <section class="main">
-       <button class="tablink" onclick="openPage('Home', this, 'red')"id="defaultOpen">Noticias</button>
-        <button class="tablink" onclick="openPage('Market', this, 'green')">Mercado</button>
-        <button class="tablink" onclick="openPage('Events', this, 'blue')">Eventos</button>
-        <button class="tablink" onclick="openPage('IDK', this, 'orange')">IDK</button>
+      <button class="tablink" onclick="openPage('Home', this, 'orange')"id="defaultOpen"><h4>Noticias</h4></button>
+       <button class="tablink" onclick="openPage('Market', this, 'green')"><h4>Mercado</h4></button>
+       <button class="tablink" onclick="openPage('Events', this, 'blue')"><h4>Eventos</h4></button>
+       <button class="tablink" onclick="openPage('IDK', this, 'orange')"><h4>IDK</h4></button>
 
-    <div id="Home" class="tabcontent">
-      <h3> </h3>
-      <p> </p>
+   <div id="Home" class="tabcontent">
+     
+     <article>
+     <center><h3>Semana de la vida saludable</h3></center>
+     <p>En el marco de nuestros sellos institucionales y para tener una vida mejor esta semana se realizó en nuestros establecimientos la “Semana de la Vida Saludable”, esta actividad es un momento del año en el cual se resaltan actividades permanentes en nuestro colegio y se refuerzan actitudes que apoyan el proceso de fortalecimiento como una comunidad Saludable. En esta instancia el colegio pone en juego todos sus recursos para favorecer el deporte, la vida saludables y mejores hábitos alimenticios con los que promovemos la construcción de una cultura de salud. Además, se asume el reto de iniciar y reforzar año a año el proceso de avance en esta materia, con el fin de aportan elementos formativos que generan reflexión sobre cada uno de nuestros alumnos y apoderados.</p>
+     <a href="#" class="vermas">Ver mas</a>
+     </article>
+     <article>
+        <center><h3>Esquinazo de 18 de Septiembre</h3></center>
+        <p> El espíritu diciochero se tomó el colegio Arrayán con un hermoso esquinazo cargo de los alumnos de 8vo.</p>
+        <a href="#" class="vermas">Ver mas</a>
+      </article>
+    <article>
+      <center><h3>Olimpiadas de Matemáticas 2018</h3></center>
+      <p>El jueves  30 de Agosto se llevó a cabo la Olimpiada de Matemática. Con la organización de los 3ros Medios.</p>
+      <a href="#" class="vermas">Ver mas</a>
+    </article>
+  
+   </div>
+   <div id="Market" class="tabcontent">
+    <article class="market">
+      <img src="assets/images/Mercado/El Tunel - ES.jpg" style="float: left;" class="markett" width="15%"/>
+      <h2>El Túnel</h2>
+      <p>El túnel es una novela corta argentina escrita por Ernesto Sábato en 1948. Juan Pablo Castel, personaje principal y narrador, cuenta desde la cárcel los motivos que lo llevaron a asesinar a María Iribarne, su amante.</p>
+      <br>
+      <br>
+      <a href="#" class="vermas">Contacto</a>
+    </article>  
+    <article class="market">
+        <img src="assets/images/Mercado/El Tunel - ES.jpg" style="float: left;" class="markett" width="15%"/>
+        <h2>El Túnel</h2>
+        <p>El túnel es una novela corta argentina escrita por Ernesto Sábato en 1948. Juan Pablo Castel, personaje principal y narrador, cuenta desde la cárcel los motivos que lo llevaron a asesinar a María Iribarne, su amante.</p>
+        <a href="#" class="vermas">Contacto</a>
+      </article>  
     </div>
-    <div id="Market" class="tabcontent">
-      <h3> </h3>
-      <p> </p>
-    </div>
 
-    <div id="Events" class="tabcontent">
-      <h3> </h3>
-      <p> </p>
-    </div>
+   <div id="Events" class="tabcontent">
+     <h3> </h3>
+     <p> </p>
+   </div>
 
-    <div id="IDK" class="tabcontent">
-      <h3> </h3>
-      <p> </p>
-    </div> 
+   <div id="IDK" class="tabcontent">
+     <h3> </h3>
+     <p> </p>
+   </div> 
 
-    </section>
-
+   </section>
     <aside>
       <div class="widget">
         <div class="imagen"></div>
+        <a title="Instagram CEAL" href="https://www.instagram.com/cealarrayan1819/"  target="_blank"><img src="assets/images/Instagram.jpg" class="responsiveimg">
       </div>
 
       <div class="widget">
@@ -64,15 +92,13 @@
     <footer>
       <section class="links">
         <a href="index.html">Inicio</a>
-        <a href="Calendarios/Seleccion.html">Calendarios</a>
-        <a href="Horarios/Seleccion.html">Horarios</a>
-        <a style="cursor:help;" href="#">Informaciones</a>
-        <a style="cursor:help;" href="#">Sobre Nosotros
-        </a>
-        
+        <a href="pages/calendarios/Seleccion.html">Calendario</a>
+        <a href="pages/horarios/Seleccion.html">Horarios</a>
+        <a href="#">Informaciones</a>
+        <a href="#">Materiales</a>
+        <a href="#">Sobre Nosotros</a>
       </section>
-      <a href="https://syscol.com/notasnet/index.aspx?colegio=elarrayan" target="_blank"><img class="nnet" src="images/notasnet.png" height="100%"></a>
-      <a class="igceal" title="CEAL IG" href="https://www.instagram.com/cealarrayan1819/" target="_blank"><img src="images/logoceal.jpg"  width="100px" height="100%">
+      <a href="https://syscol.com/notasnet/index.aspx?colegio=elarrayan" target="_blank"><img class="nnet" src="assets/images/notasnet.png" height="100%"></a>
     </footer>
   </div>
   <script type="text/javascript">
