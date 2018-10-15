@@ -8,6 +8,19 @@
   <title>Colegio El Arrayán</title>
   <link rel="stylesheet" href="../../assets/css/styles.css">
   <script src="prefix.js"></script>
+  <script>
+    function mostrar(id)
+        {
+          var objeto=document.getElementById(id)
+            if(objeto.style.display=="block")
+                objeto.style.display="none";
+            else
+                objeto.style.display="block";
+        }
+  </script>
+    <style>
+        .oculto {display:none;}
+    </style>
 </head>
 <body>
   <div class="contenedor">
@@ -16,32 +29,43 @@
         <a href="../../index.html"><img src="../../assets/images/logo.jpg" width="150" alt=""></a>
         <a href="../../index.html" style="text-shadow:#90EE90 3px 3px 5px;">Colegio El Arrayán</a>
       </div>
-      <nav>
-        <a href="../../index.html">Inicio</a>
-        <a href="../calendarios/Seleccion.html">Calendarios</a>
-        <a href="../horarios/Seleccion.html">Horarios</a>
-        <a href="#">Informaciones</a>
-        <a href="#">Materiales</a>
-        <a style="cursor: help;" href="#">About us</a>
-      </nav>
-    </header>
+      </header>
+      <div class="topnav">
+        <nav>
+          <a href="../../index.html">Inicio</a>
+          <a href="../calendarios/Seleccion.html">Calendario</a>
+          <a href="Seleccion.html">Horarios</a>
+          <a href="#">Informaciones</a>
+          <a href="#">Materiales</a>
+          <a href="#">Abouts us</a>
+        </nav>
+      </div>
     <section class="cursos">
       <h1>Seleccione su curso</h1>
-      <div class="selec-cur">
-        <a target="_blank" href="../../assets/images/cursos/chañar.png">CHAÑAR</a>
-        <a target="_blank" href="../../assets/images/cursos/olivo.png">OLIVO</a>
-        <a target="_blank" href="../../assets/images/cursos/lingue.png">LINGÜE</a>
-        <a target="_blank" href="../../assets/images/cursos/radal.png">RADAL</a>
-        <a target="_blank" href="../../assets/images/cursos/boldo.png">BOLDO</a>
-        <a target="_blank" href="../../assets/images/cursos/peumo.png">PEUMO</a>
-        <a target="_blank" href="../../assets/images/cursos/mañio.png">MAÑIO</a>
-        <a target="_blank" href="../../assets/images/cursos/palma.png">PALMA</a>
-        <a target="_blank" href="../../assets/images/cursos/laurel.png">LAUREL</a>
-        <a target="_blank" href="../../assets/images/cursos/meli.png">MELI</a>
-        <a target="_blank" href="../../assets/images/cursos/belloto.png">BELLOTO</a>
-        <a target="_blank" href="../../assets/images/cursos/quillay.png">QUILLAY</a>
-
-      </div>
+        <button class="button" onclick="mostrar('chañar')">CHAÑAR</button>
+          <img src="../../assets/images/cursos/chañar.png" class="oculto" id="chañar">
+        <button class="button" onclick="mostrar('olivo')">OLIVO</button><br>
+          <img src="../../assets/images/cursos/olivo.png" class="oculto" id="olivo">
+        <button class="button" onclick="mostrar('lingue')">LINGÜE</button>
+          <img src="../../assets/images/cursos/lingue.png" class="oculto" id="lingue">
+        <button class="button" onclick="mostrar('radal')">RADAL</button><br>
+          <img src="../../assets/images/cursos/radal.png" class="oculto" id="radal">
+        <button class="button" onclick="mostrar('boldo')">BOLDO</button>
+          <img src="../../assets/images/cursos/boldo.png" class="oculto" id="boldo">
+        <button class="button" onclick="mostrar('peumo')">PEUMO</button><br>
+          <img src="../../assets/images/cursos/peumo.png" class="oculto" id="peumo">
+        <button class="button" onclick="mostrar('mañio')">MAÑIO</button>
+          <img src="../../assets/images/cursos/mañio.png" class="oculto" id="mañio">
+        <button class="button" onclick="mostrar('palma')">PALMA</button><br>
+          <img src="../../assets/images/cursos/palma.png" class="oculto" id="palma">
+        <button class="button" onclick="mostrar('laurel')">LAUREL</button>
+          <img src="../../assets/images/cursos/laurel.png" class="oculto" id="laurel">
+        <button class="button" onclick="mostrar('meli')">MELI</button><br>
+          <img src="../../assets/images/cursos/meli.png" class="oculto" id="meli">
+        <button class="button" onclick="mostrar('belloto')">BELLOTO</button>
+          <img src="../../assets/images/cursos/belloto.png" class="oculto" id="belloto">
+        <button class="button" onclick="mostrar('quillay')">QUILLAY</button>
+          <img src="../../assets/images/cursos/quillay.png" class="oculto" id="quillay">
     </section>
 
     <aside>
@@ -65,7 +89,11 @@
         <a href="#">Materiales</a>
         <a href="#">Sobre Nosotros</a>
       </section>
-      <a href="https://syscol.com/notasnet/index.aspx?colegio=elarrayan" target="_blank"><img class="responsiveimg" src="../../assets/images/notasnet.png"></a>
+      <figure>
+        <a href="https://syscol.com/notasnet/index.aspx?colegio=elarrayan" target="_blank"> 
+          <img src="../../assets/images/notasnet.png" style="height:auto;width: auto;" />
+        </a>
+      </figure>
     </footer>
   </div>
 

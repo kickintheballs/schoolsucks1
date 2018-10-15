@@ -3,7 +3,7 @@
  * @author Lea Verou
  * MIT license
  */
-(function(){function m(a,b){return[].slice.call((b||document).querySelectorAll(a))}if(window.addEventListener){var e=window.StyleFix={link:function(a){var b=a.href||a.getAttribute("data-href");try{if(!b||"stylesheet"!==a.rel||a.hasAttribute("data-noprefix"))return}catch(p){return}var d=b.replace(/[^\/]+$/,""),f=(/^[a-z]{3,10}:/.exec(d)||[""])[0],h=(/^[a-z]{3,10}:\/\/[^\/]+/.exec(d)||[""])[0],k=/^([^?]*)\??/.exec(b)[1],g=a.parentNode,c=new XMLHttpRequest,l;c.onreadystatechange=function(){4===c.readyState&&
+function(){function m(a,b){return[].slice.call((b||document).querySelectorAll(a))}if(window.addEventListener){var e=window.StyleFix={link:function(a){var b=a.href||a.getAttribute("data-href");try{if(!b||"stylesheet"!==a.rel||a.hasAttribute("data-noprefix"))return}catch(p){return}var d=b.replace(/[^\/]+$/,""),f=(/^[a-z]{3,10}:/.exec(d)||[""])[0],h=(/^[a-z]{3,10}:\/\/[^\/]+/.exec(d)||[""])[0],k=/^([^?]*)\??/.exec(b)[1],g=a.parentNode,c=new XMLHttpRequest,l;c.onreadystatechange=function(){4===c.readyState&&
 l()};l=function(){var b=c.responseText;if(b&&a.parentNode&&(!c.status||400>c.status||600<c.status)){if((b=e.fix(b,!0,a))&&d)var b=b.replace(/url\(\s*?((?:"|')?)(.+?)\1\s*?\)/gi,function(b,a,c){return/^([a-z]{3,10}:|#)/i.test(c)?b:/^\/\//.test(c)?'url("'+f+c+'")':/^\//.test(c)?'url("'+h+c+'")':/^\?/.test(c)?'url("'+k+c+'")':'url("'+d+c+'")'}),n=d.replace(/([\\\^\$*+[\]?{}.=!:(|)])/g,"\\$1"),b=b.replace(RegExp("\\b(behavior:\\s*?url\\('?\"?)"+n,"gi"),"$1");n=document.createElement("style");n.textContent=
 "/*# sourceURL="+a.getAttribute("href")+" */\n/*@ sourceURL="+a.getAttribute("href")+" */\n"+b;n.media=a.media;n.disabled=a.disabled;n.setAttribute("data-href",a.getAttribute("href"));a.id&&(n.id=a.id);g.insertBefore(n,a);g.removeChild(a);n.media=a.media}};try{c.open("GET",b),c.send(null)}catch(p){"undefined"!=typeof XDomainRequest&&(c=new XDomainRequest,c.onerror=c.onprogress=function(){},c.onload=l,c.open("GET",b),c.send(null))}a.setAttribute("data-inprogress","")},styleElement:function(a){if(!a.hasAttribute("data-noprefix")){var b=
 a.disabled;a.textContent=e.fix(a.textContent,!0,a);a.disabled=b}},styleAttribute:function(a){var b=a.getAttribute("style"),b=e.fix(b,!1,a);a.setAttribute("style",b)},process:function(){m('link[rel="stylesheet"]:not([data-inprogress])').forEach(StyleFix.link);m("style").forEach(StyleFix.styleElement);m("[style]").forEach(StyleFix.styleAttribute)},register:function(a,b){(e.fixers=e.fixers||[]).splice(void 0===b?e.fixers.length:b,0,a)},fix:function(a,b,d){if(e.fixers)for(var f=0;f<e.fixers.length;f++)a=
@@ -17,3 +17,15 @@ d["repeating-linear-gradient"]=d["repeating-radial-gradient"]=d["radial-gradient
 k;for(k in d){var g=d[k],c=g.property,g=k+"("+g.params+")";!b(g,c)&&b(a.prefix+g,c)&&a.functions.push(k)}for(var l in f)c=f[l],!b(l,c)&&b(a.prefix+l,c)&&a.keywords.push(l)})();(function(){function b(a){h.textContent=a+"{}";return!!h.sheet.cssRules.length}var d={":any-link":null,"::backdrop":null,":fullscreen":null,":full-screen":":fullscreen","::placeholder":null,":placeholder":"::placeholder","::input-placeholder":"::placeholder",":input-placeholder":"::placeholder",":read-only":null,":read-write":null,
 "::selection":null},e={keyframes:"name",viewport:null,document:'regexp(".")'};a.selectors=[];a.selectorMap={};a.atrules=[];var h=m.appendChild(document.createElement("style")),k;for(k in d){var g=d[k]||k,c=k.replace(/::?/,function(b){return b+a.prefix});!b(g)&&b(c)&&(a.selectors.push(g),a.selectorMap[g]=c)}for(var l in e)d=l+" "+(e[l]||""),!b("@"+d)&&b("@"+a.prefix+d)&&a.atrules.push(l);m.removeChild(h)})();a.valueProperties=["transition","transition-property","will-change"];m.className+=" "+a.prefix;
 StyleFix.register(a.prefixCSS)}})(document.documentElement);
+
+/*function mostrarimagen(id) {
+   img = document.getElementById(id);
+   img.innerHTML = '<img src="http://static.php.net/www.php.net/images/php.gif" />';
+}*/
+
+/*function cargarimagen()
+{
+	var imagen = new Image();
+imagen.onload = imagenCargada;
+imagen.src = "ejemplo.png"
+} */
